@@ -58,7 +58,7 @@ JDK Download Link for Windows10/11:
 
 We have to copy the path of the JDK which we just installed. It is located in: C:\Program Files\Java\jdk<JDK VERSION WHICH WE INSTALLED>\bin
 
-![Screenshot_1.png](attachment:433bfd20-8ae2-4d08-96d4-20506c9e43f5:77bf3288-d360-40fd-b7aa-c99c16aff747.png)
+
 
 After setting environment variables just download and install the Jenkins on windows. 
 
@@ -68,6 +68,6 @@ Jenkins Download Link for Windows10/11:
 
 Then we have to access the Jenkins on localhost by hitting it on the browser. Ex. locahost:8090. After that basic setup screens will be there. We just need to go through them.
 
-![jkns.png](attachment:7af38a66-b27c-467c-92c9-09f966dd92d9:jkns.png)
+![Image](https://github.com/user-attachments/assets/f9476234-57f4-4ca4-a5ad-6c7a20dd81fd)
 
 After going through the whole process. The initial homepage looks like this.
