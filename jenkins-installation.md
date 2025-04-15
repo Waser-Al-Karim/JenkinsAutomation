@@ -52,7 +52,7 @@ sudo systemctl status jenkins
 
 JDK Download Link for Windows10/11:
 
-[Download the Latest Java LTS Free](https://www.oracle.com/java/technologies/downloads/)
+![Image](https://github.com/user-attachments/assets/f9476234-57f4-4ca4-a5ad-6c7a20dd81fd)
 
 **Setting up environment variables:**
 
@@ -68,6 +68,6 @@ Jenkins Download Link for Windows10/11:
 
 Then we have to access the Jenkins on localhost by hitting it on the browser. Ex. locahost:8090. After that basic setup screens will be there. We just need to go through them.
 
-![Image](https://github.com/user-attachments/assets/f9476234-57f4-4ca4-a5ad-6c7a20dd81fd)
+![Image](https://github.com/user-attachments/assets/d2dde5ed-a4dd-436b-9edd-c174211b9e8c)
 
 After going through the whole process. The initial homepage looks like this.
