@@ -6,8 +6,8 @@ This is my project on Jenkins. This project includes both basics and hand-on mat
 
 ## 📚 Chapters
 
-1. [Jenkins Basics](jenkins-basics.md)
-2. [Jenins Installation Steps](jenkins-installation.md)
+1. [Jenkins Basics](01-jenkins-basics.md)
+2. [Jenins Installation Steps](02-jenkins-installation.md)
 
 ## 🛠️ Work in Progress
 
