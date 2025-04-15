@@ -52,13 +52,13 @@ sudo systemctl status jenkins
 
 JDK Download Link for Windows10/11:
 
-![Image](https://github.com/user-attachments/assets/f9476234-57f4-4ca4-a5ad-6c7a20dd81fd)
+[Download the Latest Java LTS Free](https://www.oracle.com/java/technologies/downloads/)
 
 **Setting up environment variables:**
 
 We have to copy the path of the JDK which we just installed. It is located in: C:\Program Files\Java\jdk<JDK VERSION WHICH WE INSTALLED>\bin
 
-
+![Image](https://github.com/user-attachments/assets/f9476234-57f4-4ca4-a5ad-6c7a20dd81fd)
 
 After setting environment variables just download and install the Jenkins on windows. 
 
