@@ -1,6 +1,6 @@
 # Installation
 
-## Linux Setup
+## For Linux Setup
 
 ### 1. Update packages
 
@@ -11,7 +11,7 @@ sudo apt update
 ### 2. Install JDK (Jenkins requires it)
 
 ```bash
-sudo apt install openjdk-17-jdk -y
+sudo apt install openjdk-17-jre -y
 ```
 
 ### 3. Add Jenkins key and repo
@@ -46,7 +46,7 @@ sudo systemctl enable jenkins
 sudo systemctl status jenkins
 ```
 
-## Windows Setup
+## For Windows Setup
 
 **Pre-requisite:** Oracle JDK needs to be installed.  
 
