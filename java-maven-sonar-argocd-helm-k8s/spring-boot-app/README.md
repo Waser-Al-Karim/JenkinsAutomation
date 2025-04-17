@@ -44,7 +44,7 @@ docker build -t ultimate-cicd-pipeline:v1 .
 docker run -d -p 8010:8080 -t ultimate-cicd-pipeline:v1
 ```
 
-Hurray !! Access the application on `http://<ip-address>:8010`
+Access the application on `http://<ip-address>:8010`
 
 
 ## Next Steps
@@ -66,7 +66,6 @@ chmod -R 775 /opt/sonarqube
 cd /opt/sonarqube/bin/linux-x86-64
 ./sonar.sh start
 ```
-
-Hurray !! Now you can access the `SonarQube Server` on `http://<ip-address>:9000` 
+Now you can access the `SonarQube Server` on `http://<ip-address>:9000` 
 
 
