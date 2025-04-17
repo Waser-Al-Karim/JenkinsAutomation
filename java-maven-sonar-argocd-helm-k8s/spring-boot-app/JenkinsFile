@@ -1,10 +1,10 @@
 pipeline {
   agent {
-  docker {
-      image 'waserkarim/maven-docker:latest'
-      args '-v /root/.m2:/root/.m2 -v /var/run/docker.sock:/var/run/docker.sock --group-add=${DOCKER_GID}'
-   }
- }
+    docker {
+        image 'waserkarim/maven-docker:latest'  // Your custom image with Maven and Docker CLI
+        args '-v /root/.m2:/root/.m2 -v /var/run/docker.sock:/var/run/docker.sock --group-add=${DOCKER_GID}'
+    }
+  }
   stages {
     stage('Checkout') {
       steps {
