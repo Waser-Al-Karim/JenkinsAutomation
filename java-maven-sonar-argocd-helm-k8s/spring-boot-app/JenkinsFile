@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-        image 'maven:3.9.3-eclipse-temurin-17'  // or any JDK 17-based image
-        args '-v /root/.m2:/root/.m2'
+        image 'waserkarim/maven-docker:latest'  // Your custom image with Maven and Docker CLI
+        args '-v /root/.m2:/root/.m2 -v /var/run/docker.sock:/var/run/docker.sock'
     }
  }
   stages {
@@ -32,7 +32,7 @@ pipeline {
     stage('Build and Push Docker Image') {
       environment {
         DOCKER_IMAGE = "waserkarim/ultimate-cicd:${BUILD_NUMBER}"
-        DOCKERFILE_LOCATION = "java-maven-sonar-argocd-helm-k8s/spring-boot-app/Dockerfile"
+        // DOCKERFILE_LOCATION = "java-maven-sonar-argocd-helm-k8s/spring-boot-app/Dockerfile"
         REGISTRY_CREDENTIALS = credentials('docker-cred')
       }
       steps {
