@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
         image 'waserkarim/maven-docker:latest'  // Your custom image with Maven and Docker CLI
-        args '-v /root/.m2:/root/.m2 -v /var/run/docker.sock:/var/run/docker.sock --group-add=111
+        args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
     }
   }
   stages {
