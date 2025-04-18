@@ -59,7 +59,6 @@ pipeline {
                     set -e
                     pwd
                     cd JenkinsProject-EndToEnd-CICD
-                    cd JenkinsProject-EndToEnd-CICD
                     git config user.email "waseralkarim@gmail.com"
                     git config user.name "waseralkarim"
                     BUILD_NUMBER=${BUILD_NUMBER}
