@@ -55,6 +55,7 @@ pipeline {
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
+                    cd JenkinsProject-EndToEnd-CICD
                     git config user.email "waseralkarim@gmail.com"
                     git config user.name "waseralkarim"
                     BUILD_NUMBER=${BUILD_NUMBER}
