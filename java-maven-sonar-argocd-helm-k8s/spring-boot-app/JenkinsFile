@@ -51,8 +51,6 @@ pipeline {
         environment {
             GIT_REPO_NAME = "JenkinsProject-EndToEnd-CICD"
             GIT_USER_NAME = "waseralkarim"
-            WORKSPACE_DIR = sh(script: 'pwd', returnStdout: true).trim()
-            REPO_DIR = "${WORKSPACE_DIR}/${GIT_REPO_NAME}"
         }
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
@@ -60,10 +58,11 @@ pipeline {
                     #!/bin/bash
                     set -e
                     echo "Current working directory: $PWD"
-                    echo "Repository directory should be: $REPO_DIR"
-                    cd "${REPO_DIR}" || { echo "Failed to change directory to ${REPO_DIR}"; exit 1; }
-                    echo "Current working directory after cd: $PWD"
-                    cd JenkinsProject-EndToEnd-CICD
+                    echo "Listing contents:"
+                    ls -la
+                    # Go to the repo directory (just the workspace itself in this case)
+                    cd "$WORKSPACE" || { echo "Failed to change directory to $WORKSPACE"; exit 1; }
+                    echo "After cd to workspace: $PWD"
                     git config user.email "waseralkarim@gmail.com"
                     git config user.name "waseralkarim"
                     BUILD_NUMBER=${BUILD_NUMBER}
