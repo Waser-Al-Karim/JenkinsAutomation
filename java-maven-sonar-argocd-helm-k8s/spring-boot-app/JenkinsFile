@@ -52,6 +52,7 @@ pipeline {
             GIT_REPO_NAME = "JenkinsProject-EndToEnd-CICD"
             GIT_USER_NAME = "waseralkarim"
         }
+        dir('JenkinsProject-EndToEnd-CICD') {
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
@@ -65,6 +66,7 @@ pipeline {
                     git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:master
                 '''
             }
+          }
         }
     }
   }
