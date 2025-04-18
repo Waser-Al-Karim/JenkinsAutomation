@@ -9,8 +9,8 @@ pipeline {
     stage('Checkout') {
       steps {
         sh 'echo passed'
-        //git branch: 'master', url: 'https://github.com/waseralkarim/JenkinsProject-EndToEnd-CICD.git'
-          git url: 'https://github.com/waseralkarim/JenkinsProject-EndToEnd-CICD.git', branch: 'master'
+          git branch: 'master', url: 'https://github.com/waseralkarim/JenkinsProject-EndToEnd-CICD.git'
+          //git url: 'https://github.com/waseralkarim/JenkinsProject-EndToEnd-CICD.git', branch: 'master'
       }
       
     }
