@@ -54,14 +54,13 @@ pipeline {
         }
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
+              dir('java-maven-sonar-argocd-helm-k8s') {
                 sh '''
                     #!/bin/bash
                     set -e
                     echo "Current working directory: $PWD"
                     echo "Listing contents:"
                     ls -la
-                    # Go to the repo directory (just the workspace itself in this case)
-                    cd "$WORKSPACE" || { echo "Failed to change directory to $WORKSPACE"; exit 1; }
                     echo "After cd to workspace: $PWD"
                     git config user.email "waseralkarim@gmail.com"
                     git config user.name "waseralkarim"
@@ -72,6 +71,7 @@ pipeline {
                     git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:master
                 '''
             }
+          }
         }
     }
   }
