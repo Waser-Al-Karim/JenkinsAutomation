@@ -52,8 +52,8 @@ pipeline {
             GIT_REPO_NAME = "JenkinsProject-EndToEnd-CICD"
             GIT_USER_NAME = "waseralkarim"
         }
-        dir('JenkinsProject-EndToEnd-CICD') {
         steps {
+          dir('JenkinsProject-EndToEnd-CICD') {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
                     cd JenkinsProject-EndToEnd-CICD
