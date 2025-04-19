@@ -199,14 +199,18 @@ kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}
 
 Follow the [ingress documentation](https://argo-cd.readthedocs.io/en/stable/operator-manual/ingress/) on how to configure Argo CD with ingress.
 
-### Port Forwarding[¶](https://argo-cd.readthedocs.io/en/stable/getting_started/#port-forwarding)
+### Port Forwarding[](https://argo-cd.readthedocs.io/en/stable/getting_started/#port-forwarding)
 
 Kubectl port-forwarding can also be used to connect to the API server without exposing the service.
 
 ```bash
 kubectl port-forward svc/argocd-server -n argocd 8080:443
 ```
+![Image](https://github.com/user-attachments/assets/dce0baf6-08a9-42c0-9d8a-12f78d46933c)
 
 The API server can then be accessed using https://localhost:8080
+
+![Image](https://github.com/user-attachments/assets/4dafe6ca-4f55-48fb-be4b-39df83fc388f)
+# Step 6: Setting up DockerHub and GitHub login credentials For Jenkins
 
 
