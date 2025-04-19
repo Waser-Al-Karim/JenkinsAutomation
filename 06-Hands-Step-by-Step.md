@@ -213,4 +213,71 @@ The API server can then be accessed using https://localhost:8080
 ![Image](https://github.com/user-attachments/assets/4dafe6ca-4f55-48fb-be4b-39df83fc388f)
 # Step 6: Setting up DockerHub and GitHub login credentials For Jenkins
 
+Again from: Dashboard > Manage Jenkins > Credentials > System > Global credentials (unrestricted)
+We have to pass down DockerHub login credentials and GitHub secrets.
+
+![Image](https://github.com/user-attachments/assets/cca44ccb-0108-4f18-88e5-ae614d989ac5)
+
+![Image](https://github.com/user-attachments/assets/8c0ca602-0eb9-4817-9c8c-647cf76d59e0)
+
+# Step 7: Testing CI Part
+
+We have to setect the pipeline and click on the build part.
+
+![Image](https://github.com/user-attachments/assets/ce7653c2-7fb7-4b60-a7ee-d98f290febe6)
+
+If everything runs we can proceed with the CI part. We can also check the images on the dockerhub repository.
+
+![Image](https://github.com/user-attachments/assets/f9afcb46-ccf3-428e-939e-dcd58a9ae267)
+
+# Step 8: Setting up ArgoCD Image Updater
+
+### **Argo CD Image Updater**
+
+```bash
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/argocd-image-updater/master/manifests/install.yaml
+```
+
+---
+
+### **Create/Update ConfigMap or Secret for Authentication**
+
+You'll need to provide:
+
+- DockerHub credentials (if private or for rate-limiting avoidance)
+- GitHub token for write-back to the repo
+
+Create `argocd-image-updater-config` secret like:
+
+```bash
+kubectl create secret generic argocd-image-updater-config \
+  --from-literal=git.token=<YOUR_GITHUB_TOKEN> \
+  --from-literal=docker.username=<YOUR_DOCKERHUB_USERNAME> \
+  --from-literal=docker.password=<YOUR_DOCKERHUB_PASSWORD> \
+  -n argocd
+
+```
+![Image](https://github.com/user-attachments/assets/71b7cd46-9e97-46ba-aa6a-5e0687d3c0d6)
+
+### **Restart or Re-sync Argo CD**
+
+Once everything is in place:
+
+```bash
+kubectl rollout restart deployment argocd-image-updater -n argocd
+
+```
+
+Then in the UI or via CLI:
+
+```bash
+argocd app sync spring-boot-app
+```
+Now we are done setting up everything. In the next step we will check the results.
+
+# Step 8: Results
+
+![Image](https://github.com/user-attachments/assets/5df01699-c52a-4f33-98f8-09ad26e7ce54)
+
+![Image](https://github.com/user-attachments/assets/24df57de-3cda-45e6-8836-dd2393fac452)
 
