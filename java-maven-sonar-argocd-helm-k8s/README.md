@@ -59,12 +59,12 @@ Set up tools: JDK, Maven, SonarQube Scanner, Docker
 
 Add credentials: GitHub, DockerHub, Kubernetes access
 
-1. Run the pipeline from Jenkins:
+3. Run the pipeline from Jenkins:
 
 The app is built, scanned, containerized, and pushed
 
 Kubernetes manifests are updated and committed back to GitHub
 
-1. ArgoCD:
+4. ArgoCD:
 
 Automatically detects the changes and deploys the updated app to your cluster
