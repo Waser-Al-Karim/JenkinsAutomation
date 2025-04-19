@@ -136,4 +136,77 @@ The docker agent configuration is now successful.
 
 ![Image](https://github.com/user-attachments/assets/73c034ff-15d2-4311-ac43-6f7ca85545fe)
 
+Once you are done with the above steps, it is better to restart Jenkins.
+
+```
+http://<ec2-instance-public-ip>:8080/restart
+```
+
+![Image](https://github.com/user-attachments/assets/6c0095d9-d1de-42c5-8a86-e9229106472b)
+
+# Step 5: Kubernetes and ArgoCD setup on local device
+
+## 1. If the [Chocolatey Package Manager](https://chocolatey.org/) is installed, use the following command:
+
+```
+choco install minikube
+```
+
+## **2. Start your cluster**
+
+From a terminal with administrator access (but not logged in as root), run:
+
+```
+minikube start
+```
+
+Copy
+
+If minikube fails to start, see the [drivers page](https://minikube.sigs.k8s.io/docs/drivers/) for help setting up a compatible container or virtual-machine manager.
+
+## **3. Interact with your cluster**
+
+If you already have kubectl installed (see [documentation](https://kubernetes.io/docs/tasks/tools/install-kubectl/)), you can now use it to access your shiny new cluster:
+
+```bash
+kubectl get po -A
+```
+![Image](https://github.com/user-attachments/assets/66831cb3-e0ef-475f-baf1-48fc05d8583b)
+
+## 2. Download Argo CD CLI[¶](https://argo-cd.readthedocs.io/en/stable/getting_started/#2-download-argo-cd-cli)
+
+Download the latest Argo CD version from https://github.com/argoproj/argo-cd/releases/latest. More detailed installation instructions can be found via the [CLI installation documentation](https://argo-cd.readthedocs.io/en/stable/cli_installation/).
+
+Also available in Mac, Linux and WSL Homebrew:
+
+```bash
+brew install argocd
+```
+
+## 3. Access The Argo CD API Server[¶](https://argo-cd.readthedocs.io/en/stable/getting_started/#3-access-the-argo-cd-api-server)
+
+By default, the Argo CD API server is not exposed with an external IP. To access the API server, choose one of the following techniques to expose the Argo CD API server:
+
+### Service Type Load Balancer[¶](https://argo-cd.readthedocs.io/en/stable/getting_started/#service-type-load-balancer)
+
+Change the argocd-server service type to `LoadBalancer`:
+
+```bash
+kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
+```
+
+### Ingress[¶](https://argo-cd.readthedocs.io/en/stable/getting_started/#ingress)
+
+Follow the [ingress documentation](https://argo-cd.readthedocs.io/en/stable/operator-manual/ingress/) on how to configure Argo CD with ingress.
+
+### Port Forwarding[¶](https://argo-cd.readthedocs.io/en/stable/getting_started/#port-forwarding)
+
+Kubectl port-forwarding can also be used to connect to the API server without exposing the service.
+
+```bash
+kubectl port-forward svc/argocd-server -n argocd 8080:443
+```
+
+The API server can then be accessed using https://localhost:8080
+
 
