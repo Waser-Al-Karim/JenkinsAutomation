@@ -2,7 +2,7 @@
 
 This project demonstrates a complete CI/CD pipeline for a Spring Boot application using modern DevOps tools and best practices. It automates the entire process from code commit to deployment on a Kubernetes cluster using GitOps.
 
-## 🔧 Tools & Technologies
+## Tools & Technologies
 
 - **Jenkins** – Build automation and CI/CD pipeline orchestration
 - **SonarQube** – Static code analysis and quality scanning
@@ -11,7 +11,7 @@ This project demonstrates a complete CI/CD pipeline for a Spring Boot applicatio
 - **Kubernetes** – Deployment and orchestration of containerized workloads
 - **ArgoCD** – GitOps-based continuous deployment
 
-## 📌 Pipeline Overview
+## Pipeline Overview
 
 1. **Code Commit** – Developer pushes code to GitHub.
 2. **Jenkins Pipeline** – Automatically triggered:
@@ -22,7 +22,7 @@ This project demonstrates a complete CI/CD pipeline for a Spring Boot applicatio
 3. **Git Push** – The updated manifests are committed to GitHub.
 4. **ArgoCD Sync** – ArgoCD detects the change and deploys the new version to Kubernetes.
 
-## ✅ Features
+## Features
 
 - End-to-end automation from code to production
 - Static code analysis with SonarQube
@@ -31,7 +31,7 @@ This project demonstrates a complete CI/CD pipeline for a Spring Boot applicatio
 - GitOps approach for consistent, version-controlled delivery
 - Secure credentials management in Jenkins
 
-## 📁 Directory Structure
+## Directory Structure
 
 ├── Jenkinsfile # Declarative Jenkins pipeline 
 
@@ -43,7 +43,7 @@ This project demonstrates a complete CI/CD pipeline for a Spring Boot applicatio
 
 └── [README.md](http://readme.md/) # Project documentation
 
-## 🚀 How to Run
+## How to Run
 
 > This assumes you have Jenkins, Docker, Kubernetes (Minikube or other), SonarQube, and ArgoCD properly set up.
 > 
