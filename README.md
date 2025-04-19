@@ -4,6 +4,10 @@
 
 This is my project on Jenkins. This project includes both basics and hand-on materials for Jenkins.
 
+Here how the whole project works
+
+![Image](https://github.com/user-attachments/assets/a98969db-8337-4195-aeef-f167af5b9402)
+
 ## 📚 Chapters
 
 1. [Jenkins Basics](01-jenkins-basics.md)
