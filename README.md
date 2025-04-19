@@ -1,4 +1,4 @@
-# Jenkins End-to-End CI/CD With Maven, Sonarqube, Helm, ArgoCD and Kubernetes
+# Jenkins End-to-End CI/CD With Maven, Sonarqube, ArgoCD and Kubernetes
 
 # ⚙️ Jenkins Project
 
