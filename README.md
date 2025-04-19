@@ -6,7 +6,7 @@ This is my project on Jenkins. This project includes both basics and hand-on mat
 
 Here how the whole project works
 
-![Image](https://github.com/user-attachments/assets/a98969db-8337-4195-aeef-f167af5b9402)
+![Image](https://github.com/user-attachments/assets/e827398a-18e9-4c4a-b2d0-aae891d065bb)
 
 ## 📚 Chapters
 
