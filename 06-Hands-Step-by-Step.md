@@ -173,7 +173,7 @@ kubectl get po -A
 ```
 ![Image](https://github.com/user-attachments/assets/66831cb3-e0ef-475f-baf1-48fc05d8583b)
 
-## 2. Download Argo CD CLI[¶](https://argo-cd.readthedocs.io/en/stable/getting_started/#2-download-argo-cd-cli)
+## 2. Download Argo CD CLI[](https://argo-cd.readthedocs.io/en/stable/getting_started/#2-download-argo-cd-cli)
 
 Download the latest Argo CD version from https://github.com/argoproj/argo-cd/releases/latest. More detailed installation instructions can be found via the [CLI installation documentation](https://argo-cd.readthedocs.io/en/stable/cli_installation/).
 
@@ -183,7 +183,7 @@ Also available in Mac, Linux and WSL Homebrew:
 brew install argocd
 ```
 
-## 3. Access The Argo CD API Server[¶](https://argo-cd.readthedocs.io/en/stable/getting_started/#3-access-the-argo-cd-api-server)
+## 3. Access The Argo CD API Server[](https://argo-cd.readthedocs.io/en/stable/getting_started/#3-access-the-argo-cd-api-server)
 
 By default, the Argo CD API server is not exposed with an external IP. To access the API server, choose one of the following techniques to expose the Argo CD API server:
 
@@ -195,7 +195,7 @@ Change the argocd-server service type to `LoadBalancer`:
 kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
 ```
 
-### Ingress[¶](https://argo-cd.readthedocs.io/en/stable/getting_started/#ingress)
+### Ingress[](https://argo-cd.readthedocs.io/en/stable/getting_started/#ingress)
 
 Follow the [ingress documentation](https://argo-cd.readthedocs.io/en/stable/operator-manual/ingress/) on how to configure Argo CD with ingress.
 
