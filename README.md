@@ -8,7 +8,7 @@ Here how the whole project works
 
 ![Image](https://github.com/user-attachments/assets/e827398a-18e9-4c4a-b2d0-aae891d065bb)
 
-## 📚 Chapters
+## 📚 Table of Contents 
 
 1. [Jenkins Basics](01-jenkins-basics.md)
 2. [Jenins Installation Steps](02-jenkins-installation.md)
