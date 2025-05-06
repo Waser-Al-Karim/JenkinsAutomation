@@ -32,8 +32,8 @@ This project demonstrates a complete CI/CD pipeline for a Spring Boot applicatio
 - Secure credentials management in Jenkins
 
 ## Directory Structure
-```
-bash
+```bash
+
 ├── Jenkinsfile # Declarative Jenkins pipeline 
 ├── k8s-manifests/ # Kubernetes deployment and service YAMLs 
 ├── src/ # Java Spring Boot application code 
