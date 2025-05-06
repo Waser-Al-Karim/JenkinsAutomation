@@ -32,13 +32,14 @@ This project demonstrates a complete CI/CD pipeline for a Spring Boot applicatio
 - Secure credentials management in Jenkins
 
 ## Directory Structure
-
+```
+bash
 ├── Jenkinsfile # Declarative Jenkins pipeline 
-└── k8s-manifests/ # Kubernetes deployment and service YAMLs 
-└── src/ # Java Spring Boot application code 
-└── Dockerfile # Docker build configuration 
+├── k8s-manifests/ # Kubernetes deployment and service YAMLs 
+├── src/ # Java Spring Boot application code 
+├── Dockerfile # Docker build configuration 
 └── [README.md](http://readme.md/) # Project documentation
-
+```
 ## How to Run
 
 > This assumes you have Jenkins, Docker, Kubernetes (Minikube or other), SonarQube, and ArgoCD properly set up.
