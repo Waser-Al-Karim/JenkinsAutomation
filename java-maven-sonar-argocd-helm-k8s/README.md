@@ -38,7 +38,7 @@ This project demonstrates a complete CI/CD pipeline for a Spring Boot applicatio
 ├── k8s-manifests/ # Kubernetes deployment and service YAMLs 
 ├── src/ # Java Spring Boot application code 
 ├── Dockerfile # Docker build configuration 
-└── [README.md](http://readme.md/) # Project documentation
+└── README.md
 ```
 ## How to Run
 
